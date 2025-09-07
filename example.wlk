@@ -1,6 +1,6 @@
 object paquete{
     var pago = false 
-
+    var pague = 0
     
 }
 
