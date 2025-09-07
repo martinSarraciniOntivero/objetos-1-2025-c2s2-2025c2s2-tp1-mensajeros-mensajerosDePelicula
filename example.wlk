@@ -1,10 +1,14 @@
 object paquete{
-    var pago = false 
-    var pague = 0
-    
+    var property  pago = false 
+    var property destino = destPuenteBrooklyn 
+    var property persona = jeanGray
+    method estaPago(){
+        return pago
+    }
+    method sePuedeEnviar(){ 
+        return self.estaPago() and destino.puedePasar(persona)
+    }/* envia o segun corresponda */
 }
-
-
 
 object destPuenteBrooklyn{
     method puedePasar(kilosPersona){
@@ -12,7 +16,7 @@ object destPuenteBrooklyn{
     }
 }
 
-object laMatrix{
+object destLaMatrix{
     method puedeLlamar(persona){
         return persona.puedeLlamar()
     }
@@ -25,6 +29,12 @@ object jeanGray {
     method puedeLlamar(){
         return true 
     }
+    method pesoTotal(){
+        return peso
+    }
+    method puedeEnviar(_paquete){
+
+    }
 
 }
 
@@ -33,6 +43,12 @@ object Neo {
     var credito = true 
     method puedeLlamar(){
         return credito 
+    }
+    method pesoTotal(){
+        return peso
+    }
+    method sinCredito(){
+        credito = false
     }
 }
 
@@ -47,6 +63,9 @@ object saraConnor {
   }
   method pesoSaraCon(vehiculo){
     peso = peso + vehiculo.peso()
+  }
+  method pesoTotal(){
+    return peso
   }
 }
 
