@@ -32,9 +32,7 @@ object jeanGray {
     method pesoTotal(){
         return peso
     }
-    method puedeEnviar(_paquete){
 
-    }
 
 }
 
